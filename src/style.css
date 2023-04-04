@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  max-width: 1500px;
+  background-color: #fafafb;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.navbar {
+  padding: 27px 104px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+.navbar .navbar_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .navbar_top .lang_currensy {
+  display: flex;
+  gap: 16px;
+}
+.navbar .navbar_top .lang_currensy p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #262626;
+}
+.navbar .navbar_top .account_cart_search {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.navbar .navbar_top .account_cart_search .account_item,
+.navbar .navbar_top .account_cart_search .cart_item {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #262626;
+}
+.navbar .navbar_top .account_cart_search .items {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #262626;
+}
+.navbar .navbar_top .account_cart_search .price_item {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #262626;
+  opacity: 0.5;
+}
+.navbar .navbar_top .account_cart_search .search_item {
+  color: #22262a;
+}
+.navbar .navbar_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .navbar_bottom .logo img {
+  width: 100%;
+  height: 100%;
+}
+.navbar .navbar_bottom .menu {
+  display: flex;
+  align-items: center;
+  gap: 97.87px;
+}
+.navbar .navbar_bottom .menu a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #262626;
+  text-decoration: none;
+}
+.active {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #40bfff;
+}
+/* =======================             navbar END            ================================ */
+
+/* =======================             footer START          ================================ */
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 150px 134px;
+  padding-bottom: 58px;
+  background-color: #bcddfe;
+}
+.footer_top {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  padding-bottom: 63px;
+}
+.footer_top > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer .facebook_twitter {
+  display: flex;
+  padding-top: 22px;
+  gap: 39px;
+}
+.footer .facebook_twitter .facebook {
+  color: #385c8e;
+}
+.footer .facebook_twitter .twitter {
+  color: #03a9f4;
+}
+.footer_icon {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer_icon p {
+  width: 42%;
+}
+.footer_top h5 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #22262a;
+  padding-bottom: 20px;
+}
+.footer_top p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #22262a;
+}
+
+.footer_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f6f7f8;
+  padding-top: 30px;
+}
+.footer_bottom p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #c1c8ce;
+}
+.footer_bottom .brands {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+/* =======================             footer END          ================================ */
+/* =======================             slider START        ================================ */
+.home{
+  position: relative;
+}
+.slider figure {
+  position: relative;
+}
+.slider h1 {
+  position: absolute;
+  top: 50%;
+  left: 105px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  width: 40%;
+}
+/* =======================             slider END        ================================ */
+
+/* =======================             discount START    ================================ */
+
+.discount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0px 105px;
+  position: absolute;
+  top: 550px;
+  z-index: 10;
+  width: 100%;
+}
+.discount_card {
+  position: relative;
+  user-select: none;
+}
+.discount_card h3 {
+  position: absolute;
+  padding: 29px 52px;
+  width: 67%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  /* or 30px */
+
+  letter-spacing: 0.5px;
+
+  /* Neutral/Dark */
+
+  color: #223263;
+}
+.discount_card del {
+  position: absolute;
+  left: 52px;
+  bottom: 40px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+
+  letter-spacing: 0.5px;
+  text-decoration-line: line-through;
+
+  /* Neutral/Grey */
+
+  color: #9098b1;
+}
+.discount_card h4 {
+  position: absolute;
+  left: 200px;
+  bottom: 40px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+
+  letter-spacing: 0.5px;
+
+  /* Primary/Red */
+
+  color: #fb7181;
+}
+.discount_card h2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 29px 52px;
+
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 180%;
+  /* identical to box height, or 54px */
+
+  letter-spacing: 0.5px;
+
+  /* Primary/Blue */
+
+  color: #40bfff;
+}
+/* =======================             discount END      ================================ */
+
+
+
+.bestseller{
+  position: relative;
+  padding-top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
