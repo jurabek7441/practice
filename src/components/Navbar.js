@@ -1,10 +1,11 @@
-import {BiUser} from "react-icons/bi"
-import{CgShoppingCart} from "react-icons/cg"
-import {BsSearch} from "react-icons/bs"
+import { BiUser } from "react-icons/bi"
+import { CgShoppingCart } from "react-icons/cg"
+import { BsSearch } from "react-icons/bs"
 import { NavLink } from "react-router-dom"
 import Icon from "../photo/icon.png"
-export let Navbar =()=>{
-    return(
+import { Megamenu } from "./Megamenu"
+export let Navbar = () => {
+    return (
         <div className="navbar">
             <div className="navbar_top">
                 <div className="lang_currensy">
@@ -17,11 +18,13 @@ export let Navbar =()=>{
                 </div>
                 <div className="account_cart_search">
                     <div className="account_item">
-                        <i><BiUser/></i>
+                        <i><BiUser /></i>
                         <p>My profile</p>
                     </div>
                     <div className="cart_item">
-                        <i><CgShoppingCart/></i>
+                        <NavLink to="/cart">
+                            <i><CgShoppingCart /></i>
+                        </NavLink>
                     </div>
                     <div className="items">
                         <p>Items</p>
@@ -30,7 +33,7 @@ export let Navbar =()=>{
                         <p>$0.00</p>
                     </div>
                     <div className="search_item">
-                        <i><BsSearch/></i>
+                        <i><BsSearch /></i>
                     </div>
                 </div>
             </div>
@@ -42,12 +45,16 @@ export let Navbar =()=>{
                 </div>
                 <ul className="menu">
                     <NavLink to="/">Home</NavLink>
-                    <NavLink to="/bags">Bags</NavLink>
-                    <NavLink to="/sneakers">Sneakers</NavLink>
-                    <NavLink to="/belt">Belt</NavLink>
+                    <NavLink to="/bags"><p className="categoryActive">
+                        Bags
+                        <Megamenu />
+                    </p></NavLink>
+                    <NavLink to="/sneakers">Sneakers<Megamenu /></NavLink>
+                    <NavLink to="/belt">Belt<Megamenu /></NavLink>
                     <NavLink to="/contact">Contact</NavLink>
                 </ul>
             </div>
+
         </div>
     )
 }

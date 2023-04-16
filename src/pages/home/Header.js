@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Slider from "react-slick";
 import Promotion from "../../photo/PromotionImage.png";
 
@@ -6,15 +6,10 @@ import Promotion from "../../photo/PromotionImage.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Discount } from "./Discount";
+import { DataContext } from "../../Context";
 
 export const Header = () => {
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
+    const {settings}=useContext(DataContext);
     return (
         <div className="slider">
             <Slider {...settings}>

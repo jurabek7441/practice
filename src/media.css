@@ -1,0 +1,11 @@
+@media (max-width: 1497px) {
+    .bestseller .bestseller_content{
+        gap: 20px;
+    }
+}
+@media (max-width: 1450px) {
+    .bestseller .bestseller_content{
+        justify-content: center;
+        gap: 30px;
+    }
+}
