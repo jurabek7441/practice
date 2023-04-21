@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { DataContext } from "../../Context";
+import { Rating, Stack } from "@mui/material";
 
 
 export let FeaturedProducts = () => {
@@ -19,7 +20,9 @@ export let FeaturedProducts = () => {
                             </figure>
                             <div className="featuredProductsCard_content">
                                 <p>{item.name}</p>
-                                <i>{item.rating}</i>
+                                <Stack spacing={1}>
+                                    <Rating name="half-rating" defaultValue={item.rating} precision={0.5} />
+                                </Stack>
                                 <div className="card_price">
                                     <h5>${item.price - item.discount}</h5>
                                     <del>${item.price}</del>

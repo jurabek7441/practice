@@ -17,7 +17,7 @@ export let Discount = () => {
                     <figure className="discount_card"
                         data-aos="fade-down"
                         data-aos-easing="linear"
-                        data-aos-duration="1500"
+                        data-aos-duration="1000"
                         key={index}>
                         <h3>{item.name}</h3>
 

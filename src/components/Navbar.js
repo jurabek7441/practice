@@ -4,7 +4,14 @@ import { BsSearch } from "react-icons/bs"
 import { NavLink } from "react-router-dom"
 import Icon from "../photo/icon.png"
 import { Megamenu } from "./Megamenu"
+import { useContext } from "react"
+import { DataContext } from "../Context"
 export let Navbar = () => {
+    let { allData,
+        burgerBollean,
+        sideBarFunc,
+    } = useContext(DataContext);
+
     return (
         <div className="navbar">
             <div className="navbar_top">
@@ -24,13 +31,28 @@ export let Navbar = () => {
                     <div className="cart_item">
                         <NavLink to="/cart">
                             <i><CgShoppingCart /></i>
+                            <span>
+                                {
+                                    allData.filter((item) => item.cart === true && item.count > 0)
+                                        .length
+                                }
+                            </span>
                         </NavLink>
                     </div>
                     <div className="items">
                         <p>Items</p>
                     </div>
                     <div className="price_item">
-                        <p>$0.00</p>
+                        <p>${
+                            allData.filter((item) => item.cart === true)
+                                .reduce(
+                                    (a, b) =>
+                                        a + (b.price - (b.price / 100) * b.discount) * b.count,
+                                    0
+                                )
+                                .toFixed(2)
+                        }
+                        </p>
                     </div>
                     <div className="search_item">
                         <i><BsSearch /></i>
@@ -43,16 +65,45 @@ export let Navbar = () => {
                         <img src={Icon} alt="icon" />
                     </figure>
                 </div>
-                <ul className="menu">
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="/bags"><p className="categoryActive">
-                        Bags
+                <ul className={burgerBollean ? "menu close" : "menu"}>
+                    <NavLink to="/"
+                        onClick={sideBarFunc}
+                    >
+                        Home
+                    </NavLink>
+                    <NavLink to="/bags"
+                        onClick={sideBarFunc}
+                    >
+                        <p className="categoryActive">
+                            Bags
+                            <Megamenu />
+                        </p>
+                    </NavLink>
+                    <NavLink to="/sneakers"
+                        onClick={sideBarFunc}
+                    >
+                        Sneakers
                         <Megamenu />
-                    </p></NavLink>
-                    <NavLink to="/sneakers">Sneakers<Megamenu /></NavLink>
-                    <NavLink to="/belt">Belt<Megamenu /></NavLink>
-                    <NavLink to="/contact">Contact</NavLink>
+                    </NavLink>
+                    <NavLink to="/belt"
+                        onClick={sideBarFunc}
+                    >
+                        Belt
+                        <Megamenu />
+                    </NavLink>
+                    <NavLink to="/contact"
+                        onClick={sideBarFunc}
+                    >
+                        Contact
+                    </NavLink>
                 </ul>
+                <div className="hamburger"
+                    onClick={sideBarFunc}
+                >
+                    <span className={burgerBollean ? "uncliced" : "clicked"}></span>
+                    <span className={burgerBollean ? "uncliced" : "clicked"}></span>
+                    <span className={burgerBollean ? "uncliced" : "clicked"}></span>
+                </div>
             </div>
 
         </div>

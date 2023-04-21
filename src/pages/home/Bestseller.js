@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { DataContext } from "../../Context"
 import { FcLike } from "react-icons/fc"
+import { Rating, Stack } from "@mui/material";
 
 export let Bestseller = () => {
 
@@ -75,7 +76,7 @@ export let Bestseller = () => {
                                                 onClick={() => addCartFunc(item)}
                                             >
                                                 <i>
-                                                    {item.cart ?<TbShoppingCartX /> : <TbShoppingCartPlus /> }
+                                                    {item.cart ? <TbShoppingCartX /> : <TbShoppingCartPlus />}
                                                 </i>
                                             </div>
                                         </div>
@@ -84,10 +85,9 @@ export let Bestseller = () => {
 
                                         <h3>{item.name}</h3>
                                         <div className="rating">
-                                            {/* <Stack spacing={1}>
-                                            <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
-                                            <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
-                                        </Stack> */}
+                                            <Stack spacing={1}>
+                                                <Rating name="half-rating" defaultValue={item.rating} precision={0.5} />
+                                            </Stack>
                                         </div>
                                         <div className="price">
                                             <h5>${(item.price - ((item.price / 100) * item.discount)).toFixed(2)}</h5>

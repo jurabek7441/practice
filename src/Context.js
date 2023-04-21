@@ -272,7 +272,7 @@ export default function ContextProvider({ children }) {
         },
     ]);
 
-  
+
 
     // megamenu category items
     let menuCategory1 = [
@@ -307,7 +307,7 @@ export default function ContextProvider({ children }) {
         "Trainers",
     ];
     // hotDeals btn
-    let hotDealsBtn= [
+    let hotDealsBtn = [
         {
             id: 1,
             name: "Nike",
@@ -343,14 +343,6 @@ export default function ContextProvider({ children }) {
             name: "Adidas",
             count: 95,
         },
-        
-        "Nike",
-        "Airmax",
-        "Nike",
-        "Adidas",
-        "Vans",
-        "All Stars",
-        "Adidas",
     ];
     // Color Btn
     let colorBtn = [
@@ -362,7 +354,7 @@ export default function ContextProvider({ children }) {
         "gray",
     ];
     // brandBtn
-    let brandBtn=[
+    let brandBtn = [
         {
             id: 1,
             name: "Nike",
@@ -384,8 +376,8 @@ export default function ContextProvider({ children }) {
             count: 99
         },
     ];
-        
-    
+
+
     // bestseller Catgory
     let bestsellerCategoryBtn = [
         "", "bags", "sneakers", "belt", "sunglasses",
@@ -477,7 +469,7 @@ export default function ContextProvider({ children }) {
     // likeFunc
 
     let likeFunc = (item) => {
-        setAllData (
+        setAllData(
             allData.map((element) =>
                 element.id === item.id ? { ...element, like: !element.like } : element)
         );
@@ -486,9 +478,9 @@ export default function ContextProvider({ children }) {
     // add to cart
 
     let addCartFunc = (item) => {
-        setAllData (
+        setAllData(
             allData.map((element) =>
-                element.id === item.id ? { ...element, cart: !element.cart } : element)
+                element.id === item.id ? { ...element, cart: !element.cart}: element)
 
         );
     }
@@ -496,7 +488,7 @@ export default function ContextProvider({ children }) {
     // plusFunc
 
     let plusFunc = (item) => {
-        setAllData (
+        setAllData(
             allData.map((obj) =>
                 obj.id === item.id && obj.count < 10
                     ? { ...obj, count: obj.count + 1 }
@@ -516,6 +508,11 @@ export default function ContextProvider({ children }) {
             alert("error");
         }
     };
+    // hamburger
+    let [burgerBollean, setBurgerBollean] = useState(true);
+    let sideBarFunc = () => {
+        setBurgerBollean(!burgerBollean)
+    }
     return (
         <DataContext.Provider
             value={{
@@ -540,6 +537,8 @@ export default function ContextProvider({ children }) {
                 hotDealsBtn,
                 brandBtn,
                 colorBtn,
+                burgerBollean,
+                sideBarFunc,
             }}
         >
             {children}
