@@ -200,13 +200,13 @@
   }
 }
 @media (max-width: 850px) {
-  .navbar{
+  .navbar {
     padding: 27px 80px;
   }
-  .discount{
+  .discount {
     padding: 0px 80px;
   }
-  .bestseller{
+  .bestseller {
     padding: 120px 80px;
   }
   .slider h1 {
@@ -217,7 +217,7 @@
     top: -50px;
     left: -200px;
   }
-  .banner{
+  .banner {
     padding: 20px 80px;
   }
   .discount_card {
@@ -237,31 +237,317 @@
   .discount_card h4 {
     bottom: 10px;
   }
-  .discount_card h4{
+  .discount_card h4 {
     left: 65%;
     font-size: 16px;
   }
-  .bestseller .bestseller_content .bestseller_card{
+  .bestseller .bestseller_content .bestseller_card {
     width: 200px;
     align-items: center;
   }
-  .bestseller .bestseller_content .bestseller_card h3{
+  .bestseller .bestseller_content .bestseller_card h3 {
     font-size: 14px;
   }
   .bestseller .bestseller_content .bestseller_card .price h5,
   .bestseller .bestseller_content .bestseller_card .price p,
-  .bestseller .bestseller_content .bestseller_card .price h6{
+  .bestseller .bestseller_content .bestseller_card .price h6 {
     font-size: 12px;
   }
-  .searchInput{
+  .searchInput {
     padding: 100px 30px;
   }
 }
 @media (max-width: 685px) {
-  .slider h1{
+  .navbar .navbar_top .lang_currensy p {
+    font-size: 14px;
+  }
+  .navbar .navbar_top .account_cart_search .account_item,
+  .navbar .navbar_top .account_cart_search .cart_item {
+    font-size: 14px;
+  }
+  .navbar .navbar_top .account_cart_search .items {
+    display: none;
+  }
+  .navbar .navbar_top .account_cart_search .price_item {
+    font-size: 14px;
+  }
+  .bestseller .bestseller_categoryItem p {
+    font-size: 18px;
+  }
+  .slider h1 {
     width: 50%;
   }
-  .banner_left h2{
+  .discount {
+    display: none;
+  }
+
+  .banner_left h2 {
     z-index: 10;
+  }
+  .footer {
+    padding: 100px 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider h1 {
+    width: 70%;
+    top: 20%;
+  }
+  .bestseller {
+    padding: 30px 50px;
+  }
+  .whyUs {
+    flex-direction: column;
+    gap: 20px;
+    padding: 100px 40px;
+  }
+  .featuredProducts {
+    padding: 0 30px;
+  }
+  .latestNews {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 550px) {
+  .bestseller .bestseller_categoryItem {
+    gap: 40px;
+  }
+  .bestseller .bestseller_content {
+    gap: 20px;
+  }
+  .bestseller .bestseller_content .bestseller_card {
+    width: 180px;
+  }
+  .banner {
+    padding: 20px 40px;
+  }
+  .banner_left h2 {
+    width: 100%;
+  }
+  .footer_icon p {
+    width: 100%;
+  }
+}
+@media (max-width: 485px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+  .bestseller .bestseller_categoryItem p {
+    font-size: 14px;
+  }
+  .bestseller h1 {
+    font-size: 28px;
+  }
+  .bestseller .bestseller_categoryItem {
+    gap: 20px;
+  }
+  .bestseller .bestseller_content .bestseller_card {
+    width: 160px;
+  }
+}
+@media (max-width: 440px) {
+  .navbar {
+    gap: 10px;
+  }
+  .hamburger span {
+    width: 30px;
+    height: 4px;
+  }
+  .hamburger .clicked:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 9px);
+  }
+  .hamburger .clicked:nth-child(2) {
+    opacity: 0;
+  }
+  .home {
+    padding-top: 125px;
+  }
+  .slider figure {
+    height: calc(100vh - 125px);
+  }
+  .navbar .navbar_bottom .menu {
+    width: 80%;
+  }
+  .navbar .navbar_top .account_cart_search .cart_item span {
+    font-size: 10px;
+    /* padding: 1px 3px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .latestNews h1,
+  .featuredProducts h1 {
+    font-size: 28px;
+  }
+  .slider h1 {
+    left: 40px;
+  }
+  .bestseller .bestseller_content .bestseller_card {
+    width: 140px;
+  }
+  .bestseller .bestseller_content .bestseller_card h3 {
+    font-size: 13px;
+  }
+  .bestseller .bestseller_content .bestseller_card .price h5,
+  .bestseller .bestseller_content .bestseller_card .price p,
+  .bestseller .bestseller_content .bestseller_card .price h6 {
+    font-size: 10px;
+  }
+  .css-iljtu2-MuiRating-root {
+    font-size: 18px !important;
+  }
+  .bestseller .bestseller_content .bestseller_card figure .card_hover i {
+    font-size: 18px;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .whyUs_card p {
+    font-size: 14px;
+    width: 80%;
+  }
+  .latestNewsCard_content h5 {
+    font-size: 16px;
+  }
+  .latestNewsCard_content p,
+  .featuredProductsCard_content p {
+    font-size: 14px;
+  }
+  .latestNewsCard_content i {
+    font-size: 12px;
+  }
+  .featuredProductsCard {
+    align-items: center;
+    gap: 10px;
+  }
+  .featuredProductsCard > figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+  }
+  .featuredProductsCard > figure > img {
+    width: 100%;
+  }
+  .card_price h5,
+  .card_price del {
+    font-size: 14px;
+  }
+  .searchInput button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  .searchInput input {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  .footer {
+    padding: 40px;
+  }
+  .footer_top {
+    padding-bottom: 20px;
+  }
+  .footer_bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer_bottom p {
+    font-size: 10px;
+  }
+  .footer_top h5 {
+    font-size: 10px;
+  }
+  .footer_top > div {
+    gap: 5px;
+  }
+  .footer_icon p,
+  .footer_top p {
+    font-size: 8px;
+  }
+}
+@media (max-width: 405px) {
+  .navbar .navbar_top .account_cart_search {
+    gap: 20px;
+  }
+  .navbar .navbar_bottom .menu a {
+    font-size: 18px;
+    height: 60px;
+  }
+  .bestseller {
+    padding: 30px;
+  }
+  .bestseller .bestseller_categoryItem p {
+    padding-top: 10px;
+  }
+  .bestseller .bestseller_content .bestseller_card {
+    width: 130px;
+  }
+  .bestseller .bestseller_content .bestseller_card h3 {
+    font-size: 10px;
+  }
+  .css-iljtu2-MuiRating-root {
+    font-size: 14px !important;
+  }
+  .bestseller .bestseller_content .bestseller_card .price h6 {
+    padding-bottom: 0;
+    line-height: 100%;
+  }
+  .bestseller .bestseller_content .bestseller_card .price h5,
+  .bestseller .bestseller_content .bestseller_card .price p,
+  .bestseller .bestseller_content .bestseller_card .price h6 {
+    font-size: 8px;
+  }
+  .latestNews,
+  .latestNews_content,
+  .featuredProducts {
+    gap: 30px;
+  }
+  .latestNews_content {
+    padding-bottom: 50px;
+  }
+  .latestNewsCard figure {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .whyUs {
+    padding: 50px 30px;
+  }
+
+  .latestNewsCard figure img {
+    width: 100%;
+  }
+}
+@media (max-width: 370px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+  .navbar .navbar_top .account_cart_search {
+    gap: 15px;
+  }
+  .home {
+    padding-top: 113px;
+    padding-bottom: 0;
+  }
+  .slider figure {
+    height: calc(100vh - 113px);
+  }
+  .bestseller .bestseller_content .bestseller_card {
+    width: 120px;
+  }
+  .bestseller .bestseller_content .bestseller_card h3 {
+    font-size: 8px;
+  }
+  .whyUs,
+  .searchInput {
+    padding: 50px 30px;
+  }
+}
+@media (max-width: 333px) {
+  .navbar .navbar_top .account_cart_search {
+    gap: 10px;
   }
 }
