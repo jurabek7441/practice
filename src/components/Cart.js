@@ -48,14 +48,15 @@ export let Cart = () => {
                                             key={obj.id}
                                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                         >
+                                            <div className="remove_item"
+                                                onClick={() => addCartFunc(obj)}
+                                            >
+                                                <CiCircleRemove />
+                                            </div>
                                             <TableCell className="cartItem_name"
                                                 component="th" scope="row"
                                             >
-                                                <div className="remove_item"
-                                                    onClick={() => addCartFunc(obj)}
-                                                >
-                                                    <CiCircleRemove />
-                                                </div>
+
                                                 <figure>
                                                     <img src={obj.photo} alt={obj.name} />
                                                 </figure>
@@ -91,25 +92,66 @@ export let Cart = () => {
                         }
                     </Table>
                 </TableContainer>
+                <div className="cartContent_media">
+                    {
+                        allData.filter((item) => item.cart === true)
+                            .map((obj) => (
+                                <div className="cartMedia_card"
+                                    key={obj.id}
+                                >
+                                    <div className="remove_item"
+                                        onClick={() => addCartFunc(obj)}
+                                    >
+                                        <CiCircleRemove />
+                                    </div>
+                                    <figure>
+                                        <img src={obj.photo} alt={obj.name} />
+                                    </figure>
+                                    <div className="cartMedia_cardContent">
+                                        <h3>{obj.name}</h3>
+                                        <p>${(obj.price * obj.count).toFixed(2)}</p>
+                                        <div
+                                            className="countItem"
+                                        >
 
+                                            <button className="countPlus"
+                                                onClick={() => plusFunc(obj)}
+                                            >
+                                                +
+                                            </button>
+                                            <span>
+                                                {obj.count}
+                                            </span>
+                                            <button className="countMinus"
+                                                onClick={() => minusFunc(obj)}
+                                            >
+                                                -
+                                            </button>
+                                        </div>
+                                        <p>${obj.price}</p>
+                                    </div>
+                                </div>
+                            ))
+                    }
+                </div>
             </div>
             <div className="cartCheck">
                 <div className="voucherCode">
-                    <input type="text" placeholder='Voucher code' id='code'/>
+                    <input type="text" placeholder='Voucher code' id='code' />
                     <label htmlFor='code'
-                    typeof='confirm'
+                        typeof='confirm'
                     >Redeem</label>
                 </div>
                 <div className="checkItem">
                     <div className="subtotal">
                         <p>Subtotal</p>
                         <p>${allData.filter((item) => item.cart === true)
-                        .reduce(
-                            (a, b) =>
-                                a + b.price  * b.count,
-                            0
-                        )
-                        .toFixed(2)}</p>
+                            .reduce(
+                                (a, b) =>
+                                    a + b.price * b.count,
+                                0
+                            )
+                            .toFixed(2)}</p>
                     </div>
                     <div className="shippingFree">
                         <p>Shipping Free</p>
@@ -122,13 +164,13 @@ export let Cart = () => {
                     <div className="total">
                         <h3>TOTAL</h3>
                         <h3>$
-                        {allData.filter((item) => item.cart === true)
-                        .reduce(
-                            (a, b) =>
-                                a + (b.price - (b.price / 100) * b.discount) * b.count,
-                            0
-                        )
-                        .toFixed(2)}
+                            {allData.filter((item) => item.cart === true)
+                                .reduce(
+                                    (a, b) =>
+                                        a + (b.price - (b.price / 100) * b.discount) * b.count,
+                                    0
+                                )
+                                .toFixed(2)}
                         </h3>
                     </div>
                     <button>

@@ -65,7 +65,7 @@ export let Navbar = () => {
                         <img src={Icon} alt="icon" />
                     </figure>
                 </div>
-                <ul className={burgerBollean ? "menu close" : "menu"}>
+                <div className={burgerBollean ? "menu close" : "menu"}>
                     <NavLink to="/"
                         onClick={sideBarFunc}
                     >
@@ -96,7 +96,7 @@ export let Navbar = () => {
                     >
                         Contact
                     </NavLink>
-                </ul>
+                </div>
                 <div className="hamburger"
                     onClick={sideBarFunc}
                 >

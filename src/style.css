@@ -895,7 +895,12 @@ transform: scale(1.1);
   border-radius: 7px;
   overflow: hidden;
 }
-.cart .cartItem_name .remove_item {
+.css-34nofg-MuiTableRow-root{
+  align-items: center;
+  display: flex;
+
+}
+.cart .remove_item {
   color: #ff4252;
   font-size: 28px;
 }
@@ -1175,6 +1180,13 @@ transform: scale(1.1);
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 30%;
+}
+.productList_sidebar .remove{
+  display: none;
+}
+.filterOpen{
+  display: none;
 }
 .productList_sidebar .hotDeals,
 .productList_sidebar .prices,

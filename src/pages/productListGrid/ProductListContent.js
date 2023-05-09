@@ -20,6 +20,7 @@ export let ProductListContent = () => {
         categoryState,
         likeFunc,
         addCartFunc,
+        filterFunc,
     } = useContext(DataContext);
 
 
@@ -30,7 +31,7 @@ export let ProductListContent = () => {
         <div className="bestseller">
             
             <div className="bestseller_categoryItem">
-                {bestsellerCategoryBtn.map((btn, index) => (
+                {/* {bestsellerCategoryBtn.map((btn, index) => (
                     <p
                         key={index}
                         onClick={() => {
@@ -39,7 +40,8 @@ export let ProductListContent = () => {
                     >
                         {btn === "" ? "All" : btn}
                     </p>
-                ))}
+                ))} */}
+                <button className="filterOpen" onClick={filterFunc}>filter</button>
             </div>
             <div className="bestseller_content">
                 {

@@ -480,7 +480,7 @@ export default function ContextProvider({ children }) {
     let addCartFunc = (item) => {
         setAllData(
             allData.map((element) =>
-                element.id === item.id ? { ...element, cart: !element.cart}: element)
+                element.id === item.id ? { ...element, cart: !element.cart } : element)
 
         );
     }
@@ -513,6 +513,11 @@ export default function ContextProvider({ children }) {
     let sideBarFunc = () => {
         setBurgerBollean(!burgerBollean)
     }
+    // filter
+    let [filterBollean, setFilterBollean] = useState(true);
+    let filterFunc = () => {
+        setFilterBollean(!filterBollean)
+    }
     return (
         <DataContext.Provider
             value={{
@@ -539,6 +544,9 @@ export default function ContextProvider({ children }) {
                 colorBtn,
                 burgerBollean,
                 sideBarFunc,
+                filterFunc,
+                filterBollean,
+                setFilterBollean,
             }}
         >
             {children}

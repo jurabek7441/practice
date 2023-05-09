@@ -3,10 +3,12 @@ import { DataContext } from "../../Context"
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
+import { CiCircleRemove } from "react-icons/ci"
 
 function valuetext(value) {
     return `$${value}`;
 }
+
 
 
 export let ProductListSidebar = () => {
@@ -20,10 +22,16 @@ export let ProductListSidebar = () => {
     let {
         hotDealsBtn,
         colorBtn,
-        brandBtn
+        brandBtn,
+        filterBollean,
+        filterFunc
     } = useContext(DataContext);
     return (
-        <div className="productList_sidebar">
+        <div className={filterBollean ? "productList_sidebar" : "sidebarClose"}>
+            <i 
+            className="remove"
+            onClick={filterFunc}
+            ><CiCircleRemove /></i>
             <div className="hotDeals">
                 <h5>Hot Deals</h5>
                 <div className="hotDeals_list">
@@ -49,7 +57,7 @@ export let ProductListSidebar = () => {
                     <p>Ranger:</p>
                     <p>${(value[0]).toFixed(2)} - ${(value[1]).toFixed(2)} </p>
                 </div>
-                <Box sx={{ width: 250 }}>
+                <Box sx={{}}>
                     <Slider
                         getAriaLabel={() => 'Temperature range'}
                         value={value}
@@ -63,14 +71,14 @@ export let ProductListSidebar = () => {
                 <h5>Color</h5>
                 <div className="color_list">
                     {
-                        colorBtn.map((item, index)=>(
+                        colorBtn.map((item, index) => (
                             <div
-                            key={index}
-                            style={{
-                                backgroundColor: item,
-                                padding: "10px",
-                            }}
-                            className="color_item"
+                                key={index}
+                                style={{
+                                    backgroundColor: item,
+                                    padding: "10px",
+                                }}
+                                className="color_item"
                             ></div>
                         ))
                     }
@@ -80,9 +88,9 @@ export let ProductListSidebar = () => {
                 <h5>Brand</h5>
                 <div className="brand_list">
                     {
-                        brandBtn.map((item)=>(
+                        brandBtn.map((item) => (
                             <div className="brand_item"
-                            key={item.id}
+                                key={item.id}
                             >
                                 <p>{item.name}</p>
                                 <span>{item.count}</span>

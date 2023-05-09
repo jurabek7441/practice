@@ -14,10 +14,10 @@ export let ProductList = () => {
                 <p>Hot Deal</p>
             </div>
             <div className="productList_bottom">
-                <ProductListSidebar/>
+                <ProductListSidebar />
                 <div className="productList_content">
-                    <Banner/>
-                    <ProductListContent/>
+                    <Banner />
+                    <ProductListContent />
                 </div>
             </div>
         </div>
