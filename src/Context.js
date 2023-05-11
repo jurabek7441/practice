@@ -52,7 +52,7 @@ export default function ContextProvider({ children }) {
         {
             id: 1,
             photo: Bestseller1,
-            name: "Nike Air Max 270 React",
+            name: "Air Force",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -65,7 +65,7 @@ export default function ContextProvider({ children }) {
         {
             id: 2,
             photo: Bestseller2,
-            name: "Nike Air Max 270 React",
+            name: "Air Jordan",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -78,7 +78,7 @@ export default function ContextProvider({ children }) {
         {
             id: 3,
             photo: Bestseller3,
-            name: "Nike Air Max 270 React",
+            name: "Nike Air Max",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -91,7 +91,7 @@ export default function ContextProvider({ children }) {
         {
             id: 4,
             photo: Bestseller4,
-            name: "Nike Air Max 270 React",
+            name: "Nike Air Yeezy",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -104,7 +104,7 @@ export default function ContextProvider({ children }) {
         {
             id: 5,
             photo: Bestseller5,
-            name: "Nike Air Max 270 React",
+            name: "Chuck Taylor All-Stars",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -117,7 +117,7 @@ export default function ContextProvider({ children }) {
         {
             id: 6,
             photo: Bestseller6,
-            name: "Nike Air Max 270 React",
+            name: "Converse (lifestyle wear)",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -130,7 +130,7 @@ export default function ContextProvider({ children }) {
         {
             id: 7,
             photo: Bestseller7,
-            name: "Nike Air Max 270 React",
+            name: "Nike Free",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -143,7 +143,7 @@ export default function ContextProvider({ children }) {
         {
             id: 8,
             photo: Bestseller4,
-            name: "Nike Air Max 270 React",
+            name: "Jumpman ",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -156,7 +156,7 @@ export default function ContextProvider({ children }) {
         {
             id: 11,
             photo: Bestseller1,
-            name: "Nike Air Max 270 React",
+            name: "Nike Mercurial Vapor",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -169,7 +169,7 @@ export default function ContextProvider({ children }) {
         {
             id: 12,
             photo: Bestseller2,
-            name: "Nike Air Max 270 React",
+            name: "Nike Air Max 97",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -182,7 +182,7 @@ export default function ContextProvider({ children }) {
         {
             id: 13,
             photo: Bestseller3,
-            name: "Nike Air Max 270 React",
+            name: "Nike Blazers",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -195,7 +195,7 @@ export default function ContextProvider({ children }) {
         {
             id: 14,
             photo: Bestseller4,
-            name: "Nike Air Max 270 React",
+            name: "NikeID",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -208,7 +208,7 @@ export default function ContextProvider({ children }) {
         {
             id: 15,
             photo: Bestseller5,
-            name: "Nike Air Max 270 React",
+            name: "Nike CTR360 Maestri",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -221,7 +221,7 @@ export default function ContextProvider({ children }) {
         {
             id: 16,
             photo: Bestseller6,
-            name: "Nike Air Max 270 React",
+            name: "Nike Grind",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -234,7 +234,7 @@ export default function ContextProvider({ children }) {
         {
             id: 17,
             photo: Bestseller7,
-            name: "Nike Air Max 270 React",
+            name: "Nike Hypervenom",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -247,7 +247,7 @@ export default function ContextProvider({ children }) {
         {
             id: 18,
             photo: Bestseller4,
-            name: "Nike Air Max 270 React",
+            name: "Nike Ordem",
             rating: 4,
             price: 534.33,
             discount: 24,
@@ -260,7 +260,7 @@ export default function ContextProvider({ children }) {
         {
             id: 19,
             photo: Bestseller2,
-            name: "Nike Air Max 270 React",
+            name: "Nike Shox",
             rating: 4,
             price: 534.33,
             discount: 24,

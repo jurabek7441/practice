@@ -7,11 +7,11 @@ import { SearchInut } from "./SearchInput"
 import { WhyUs } from "./WhyUs"
 
 
-export let Home = ()=>{
+export let Home = ({state})=>{
     return(
         <div className="home">
             <Header/>
-            <Bestseller/>
+            <Bestseller state={state}/>
             <Banner/>
             <WhyUs/>
             <LatestNews/>

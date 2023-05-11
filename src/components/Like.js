@@ -1,19 +1,13 @@
-import { useContext } from "react"
-
+import { useContext } from "react";
+import { DataContext } from "../Context";
 import { TbShoppingCartPlus } from "react-icons/tb"
 import { TbShoppingCartX } from "react-icons/tb"
 import { HiOutlineHeart } from "react-icons/hi"
-// import { Rating, Stack } from "@mui/material"
-
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-import { DataContext } from "../../Context"
-import { FcLike } from "react-icons/fc"
+import { BsTrash} from "react-icons/bs"
 import { Rating, Stack } from "@mui/material";
 
-export let Bestseller = ({ state }) => {
 
+export let Like = ({ state }) => {
     const {
         allData,
         bestsellerCategoryBtn,
@@ -22,30 +16,14 @@ export let Bestseller = ({ state }) => {
         likeFunc,
         addCartFunc,
     } = useContext(DataContext);
-
-
-    useEffect(() => {
-        AOS.init();
-    }, []);
     return (
-        <div className="bestseller">
-            <h1>BEST SELLER</h1>
-            <div className="bestseller_categoryItem">
-                {bestsellerCategoryBtn.map((btn, index) => (
-                    <p
-                        key={index}
-                        onClick={() => {
-                            setCategoryState(btn);
-                        }}
-                    >
-                        {btn === "" ? "All" : btn}
-                    </p>
-                ))}
-            </div>
+        <div className="like">
             <div className="bestseller_content">
+
+
                 {
                     allData.length > 0 &&
-                    allData.filter((obj) => {
+                        allData.filter((obj) => {
                             if (state === "") {
                                 return obj;
                             } else if (
@@ -55,7 +33,7 @@ export let Bestseller = ({ state }) => {
                                 return obj;
                             }
                         }).length > 0 ? (
-                            allData
+                        allData
                             .filter((obj) => {
                                 if (state === "") {
                                     return obj;
@@ -65,7 +43,7 @@ export let Bestseller = ({ state }) => {
                                 ) {
                                     return obj;
                                 }
-                            })
+                            }) && allData.filter((item) => item.like === true)
                             .map((item, index) => (
                                 <div className="bestseller_card"
                                     data-aos="flip-left"
@@ -78,7 +56,7 @@ export let Bestseller = ({ state }) => {
                                                 onClick={() => likeFunc(item)}
                                             >
                                                 <i>
-                                                    {item.like ? <FcLike /> : <HiOutlineHeart />}
+                                                    <BsTrash/>
 
                                                 </i>
                                             </div>
@@ -112,7 +90,6 @@ export let Bestseller = ({ state }) => {
                     )
                 }
             </div>
-            <p>LOAD MORE</p>
         </div>
     )
 }

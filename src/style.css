@@ -31,7 +31,17 @@
 }
 .navbar .navbar_top .lang_currensy {
   display: flex;
+  align-items: center;
   gap: 16px;
+}
+.navbar .navbar_top .lang_currensy figure{
+  width: 20px;
+}
+.navbar .navbar_top .lang_currensy figure:last-child{
+  width: 30px;
+}
+.navbar .navbar_top .lang_currensy figure img{
+  width: 100%;
 }
 .navbar .navbar_top .lang_currensy p {
   font-family: "Poppins", sans-serif;
@@ -48,7 +58,8 @@
   align-items: center;
 }
 .navbar .navbar_top .account_cart_search .account_item,
-.navbar .navbar_top .account_cart_search .cart_item {
+.navbar .navbar_top .account_cart_search .cart_item,
+  .navbar .navbar_top .account_cart_search .like_item {
   display: flex;
   gap: 7px;
   align-items: center;
@@ -60,7 +71,8 @@
   color: #262626;
   position: relative;
 }
-.navbar .navbar_top .account_cart_search .cart_item span{
+.navbar .navbar_top .account_cart_search .cart_item span,
+  .navbar .navbar_top .account_cart_search .like_item span{
   position: absolute;
   top: -10%;
   left: 50%;
@@ -1001,6 +1013,9 @@ transform: scale(1.1);
   /* identical to box height */
   color: #ffffff;
 }
+.cartContent_media{
+  display: none;
+}
 /* ============================            Cart (end)    =================================== */
 /* ============================            Contact (start)    =================================== */
 .contact {
@@ -1126,7 +1141,7 @@ transform: scale(1.1);
 .navbar .navbar_bottom .menu a:hover .megamenu {
   display: flex;
   position: absolute;
-  top: 135px;
+  top: 175px;
   left: 30%;
 }
 .megamenu .part {
@@ -1325,3 +1340,159 @@ transform: scale(1.1);
   padding-top: 25px;
 }
 /* ============================            ProductList (end)    =================================== */
+/* ============================            Like  (start)    =================================== */
+.like{
+  padding: 70px 54px;
+  padding-top: 200px;
+}
+.like .bestseller_content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 34.5px;
+  padding-top: 25px;
+}
+.like .bestseller_content .bestseller_card {
+  border: 3px solid #f6f7f8;
+  overflow: hidden;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+.like .bestseller_content .bestseller_card figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.9s ease-in-out;
+}
+.like .bestseller_content .bestseller_card figure .card_hover {
+  position: absolute;
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 13px;
+  transition: 0.9s ease-in-out;
+  opacity: 0;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff12;
+  z-index: 5;
+  top: 0;
+  backdrop-filter: blur(5px);
+}
+.like .bestseller_content .bestseller_card figure .card_hover div {
+  border: 2px solid #33a0ff25;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+.like .bestseller_content .bestseller_card figure .card_hover i {
+  color: #33a0ff;
+  font-size: 28px;
+  padding: 14px 17px;
+  line-height: 28px;
+}
+.like .bestseller_content .bestseller_card:hover .card_hover {
+  display: flex;
+  opacity: 1;
+}
+/* .bestseller .bestseller_content .bestseller_card:hover{
+  transform: scale(1.05);
+} */
+.like .bestseller_content .bestseller_card figure img {
+  width: 100%;
+  height: 100%;
+}
+.like .bestseller_content .bestseller_card .card_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.like .bestseller_content .bestseller_card h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+
+  letter-spacing: 0.5px;
+
+  /* Neutral/Dark */
+  padding-top: 14px;
+  color: #223263;
+}
+.like .bestseller_content .bestseller_card .price {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.like .bestseller_content .bestseller_card .price h5 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 180%;
+  /* or 32px */
+
+  letter-spacing: 0.5px;
+
+  /* Primary/Blue */
+
+  color: #40bfff;
+}
+.like .bestseller_content .bestseller_card .price p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  /* identical to box height, or 21px */
+
+  letter-spacing: 0.5px;
+  text-decoration-line: line-through;
+
+  /* Neutral/Grey */
+
+  color: #9098b1;
+}
+.like .bestseller_content .bestseller_card .price h6 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  /* identical to box height, or 21px */
+
+  letter-spacing: 0.5px;
+
+  /* Primary/Red */
+
+  color: #fb7181;
+  padding-bottom: 10px;
+}
+.like > p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height */
+
+  color: #33a0ff;
+  padding-top: 29px;
+  border-bottom: 3px solid #33a0ff;
+}
+
+/* ============================            Like  (end)    =================================== */

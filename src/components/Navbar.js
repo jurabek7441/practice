@@ -1,4 +1,5 @@
 import { BiUser } from "react-icons/bi"
+import { BsHeartFill } from "react-icons/bs"
 import { CgShoppingCart } from "react-icons/cg"
 import { BsSearch } from "react-icons/bs"
 import { NavLink } from "react-router-dom"
@@ -6,7 +7,14 @@ import Icon from "../photo/icon.png"
 import { Megamenu } from "./Megamenu"
 import { useContext } from "react"
 import { DataContext } from "../Context"
-export let Navbar = () => {
+import * as React from 'react';
+import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
+import Usa from "../photo/usa.png"
+import Eng from "../photo/eng.png"
+
+
+export let Navbar = ({ changeInput }) => {
     let { allData,
         burgerBollean,
         sideBarFunc,
@@ -16,31 +24,39 @@ export let Navbar = () => {
         <div className="navbar">
             <div className="navbar_top">
                 <div className="lang_currensy">
-                    <div className="lang">
-                        <p>ENG</p>
-                    </div>
-                    <div className="currensy">
-                        <p>USD</p>
-                    </div>
+                    <figure className="eng_lang">
+                        <img src={Eng} alt="eng" />
+                    </figure>
+                    <figure className="usa_lang">
+                        <img src={Usa} alt="usa" />
+                    </figure>
                 </div>
                 <div className="account_cart_search">
                     <div className="account_item">
                         <i><BiUser /></i>
-                        <p>My profile</p>
                     </div>
                     <div className="cart_item">
                         <NavLink to="/cart">
                             <i><CgShoppingCart /></i>
                             <span>
                                 {
-                                    allData.filter((item) => item.cart === true && item.count > 0)
+                                    allData.filter((item) => item.cart === true)
                                         .length
                                 }
                             </span>
                         </NavLink>
                     </div>
-                    <div className="items">
-                        <p>Items</p>
+                    <div className="like_item">
+                        <NavLink to="/like"
+                        >
+                            <i><BsHeartFill /></i>
+                            <span>
+                                {allData.filter((item) => item.like === true)
+                                    .length
+                                }
+                            </span>
+                        </NavLink>
+
                     </div>
                     <div className="price_item">
                         <p>${
@@ -55,7 +71,16 @@ export let Navbar = () => {
                         </p>
                     </div>
                     <div className="search_item">
-                        <i><BsSearch /></i>
+                        <i></i>
+                        <Stack spacing={2} sx={{ width: 300 }}>
+                            <TextField
+                                onChange={changeInput}
+                                label={<BsSearch />}
+                                InputProps={{
+                                    type: 'search',
+                                }}
+                            />
+                        </Stack>
                     </div>
                 </div>
             </div>
